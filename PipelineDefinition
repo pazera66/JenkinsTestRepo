@@ -1,0 +1,8 @@
+node{
+    stage('Get Git repo'){
+        git 'https://github.com/pazera66/JenkinsTestRepo.git'
+    }
+    stage('Print file from repo'){
+        sh label: '', script: 'cat README.md'
+    }
+}
